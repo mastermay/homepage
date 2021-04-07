@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhiwei.dev</id>
     <title>讲道理嘛</title>
-    <updated>2021-04-06T12:31:02.515Z</updated>
+    <updated>2021-04-07T13:18:48.298Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhiwei.dev"/>
     <link rel="self" href="https://zhiwei.dev/atom.xml"/>
@@ -11,15 +11,21 @@
     <icon>https://zhiwei.dev/favicon.ico</icon>
     <rights>All rights reserved 2021, 讲道理嘛</rights>
     <entry>
-        <title type="html"><![CDATA[深入理解 Happens-Before]]></title>
-        <id>https://zhiwei.dev/post/shen-ru-li-jie-happens-before/</id>
-        <link href="https://zhiwei.dev/post/shen-ru-li-jie-happens-before/">
+        <title type="html"><![CDATA[Java 的初始化顺序]]></title>
+        <id>https://zhiwei.dev/post/java-de-chu-shi-hua-shun-xu/</id>
+        <link href="https://zhiwei.dev/post/java-de-chu-shi-hua-shun-xu/">
         </link>
-        <updated>2021-03-04T13:01:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>现代操作系统（Windows，macOS，Linux）都支持执行多任务，多任务就是同时运行多个任务，例如我们可以在浏览网页的时候听歌。CPU 执行代码都是一条一条执行的，在单核 CPU 的系统上，操作系统通过调动不同任务的 CPU 指令交替执行实现宏观上的多任务。多核 CPU 也是需要操作系统进行任务调度，毕竟需要执行的任务数远大于 CPU 核心数。</p>
-]]></summary>
+        <updated>2021-04-07T13:12:51.000Z</updated>
+        <content type="html"><![CDATA[<p>todo</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[深入理解 Happens-Before]]></title>
+        <id>https://zhiwei.dev/post/learn-happens-before/</id>
+        <link href="https://zhiwei.dev/post/learn-happens-before/">
+        </link>
+        <updated>2021-03-03T13:01:59.000Z</updated>
         <content type="html"><![CDATA[<p>现代操作系统（Windows，macOS，Linux）都支持执行多任务，多任务就是同时运行多个任务，例如我们可以在浏览网页的时候听歌。CPU 执行代码都是一条一条执行的，在单核 CPU 的系统上，操作系统通过调动不同任务的 CPU 指令交替执行实现宏观上的多任务。多核 CPU 也是需要操作系统进行任务调度，毕竟需要执行的任务数远大于 CPU 核心数。</p>
-<!-- more -->
 ]]></content>
     </entry>
 </feed>

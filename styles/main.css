@@ -315,7 +315,7 @@ a {
   transition: all 0.3s;
 }
 a:hover {
-  color: #006CFF;
+  color: #FFC300;
 }
 body,
 div,
@@ -348,19 +348,30 @@ td {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  padding: 0 24px;
+  padding: 100px 24px 0;
+}
+.stretch {
+  flex: 1;
 }
 .site-header {
-  padding: 48px 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 10px 18px;
+  align-items: center;
+  background-color: #ffffff;
   text-align: center;
 }
 .site-header .site-title {
-  font-size: 32px;
-  font-weight: bold;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: normal;
 }
 .site-header .site-description {
   font-size: 16px;
-  padding: 24px;
   color: #495057;
   font-weight: lighter;
 }
@@ -371,15 +382,14 @@ td {
 }
 .site-header .menu-container a.menu {
   font-size: 16px;
-  padding: 8px 16px;
+  padding: 0 16px;
   flex-shrink: 0;
   font-weight: 600;
 }
 .site-header .avatar {
-  margin: 0 auto 24px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
 }
 .site-header .logo-circle {
   stroke-dasharray: 10;
@@ -406,15 +416,6 @@ td {
   margin: 4px 8px;
   color: #868e96;
 }
-@media (max-width: 600px) {
-  .site-header {
-    padding: 24px 0 0;
-  }
-  .site-header .avatar {
-    width: 80px;
-    height: 80px;
-  }
-}
 .post-container {
   flex: 1;
 }
@@ -423,13 +424,13 @@ td {
 }
 .post-container .post .post-title {
   font-size: 28px;
-  text-align: center;
+  text-align: left;
   padding: 24px 0;
   font-weight: 900;
   letter-spacing: 0.02em;
 }
 .post-container .post .post-info {
-  text-align: center;
+  text-align: left;
   font-size: 12px;
   padding-bottom: 24px;
 }
@@ -470,12 +471,12 @@ td {
   font-weight: bolder;
 }
 .post-container .post .post-abstract a {
-  color: #006CFF;
+  color: #FFC300;
   transition: all 0.3s;
 }
 .post-container .post .post-abstract a:hover {
-  color: #0061e6;
-  border-bottom: 1px dotted #0061e6;
+  color: #e0af0e;
+  border-bottom: 1px dotted #e0af0e;
 }
 .post-container .post .post-abstract code {
   font-family: monospace;
@@ -574,8 +575,8 @@ td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.26);
 }
 .post-detail .post .post-content a:hover {
-  color: #0061e6;
-  border-bottom: 1px solid #0061e6;
+  color: #e0af0e;
+  border-bottom: 1px solid #e0af0e;
 }
 .post-detail .post .post-content img {
   display: block;
@@ -827,7 +828,7 @@ td {
   background: #fafafa;
 }
 .toc-container li a.current {
-  color: #006CFF;
+  color: #FFC300;
   background: #fafafa;
 }
 @media (max-width: 600px) {
@@ -914,6 +915,149 @@ td {
   align-items: center;
   margin-left: 24px;
 }
+.site-landscape {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 36px;
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  font-size: 20px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  text-align: right;
+}
+.site-landscape .landscape-avatar:hover .logo-circle {
+  stroke-dasharray: 10;
+  animation: logo-animation 3s linear forwards;
+  fill: #fff;
+}
+.site-landscape .landscape-avatar:hover .logo-path {
+  stroke-dasharray: 88;
+  animation: logo-animation 3s linear forwards;
+  fill: #000;
+  fill-opacity: 0%;
+}
+.site-landscape .landscape-word-wrapper {
+  position: relative;
+  display: block;
+  user-select: none;
+}
+.site-landscape .landscape-word-wrapper::before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  color: #000000;
+  text-align: right;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.site-landscape .landscape-word-wrapper .landscape-word {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+.site-landscape .landscape-word-wrapper.word-first::before {
+  content: "Know.";
+  animation: animated-landscape-before1 8s infinite;
+}
+.site-landscape .landscape-word-wrapper.word-first .landscape-word {
+  background-image: linear-gradient(90deg, #FFC300, #ffdf76);
+  animation: animated-landscape1 8s infinite;
+}
+.site-landscape .landscape-word-wrapper.word-second::before {
+  content: "Something.";
+  animation: animated-landscape-before2 8s infinite;
+}
+.site-landscape .landscape-word-wrapper.word-second .landscape-word {
+  background-image: linear-gradient(90deg, #d64f44, #f391a9);
+  animation: animated-landscape2 8s infinite;
+}
+.site-landscape .landscape-word-wrapper.word-third::before {
+  content: "Inside Out.";
+  animation: animated-landscape-before3 8s infinite;
+}
+.site-landscape .landscape-word-wrapper.word-third .landscape-word {
+  background-image: linear-gradient(90deg, #00a6ac, #78cdd1);
+  animation: animated-landscape3 8s infinite;
+}
+@keyframes animated-landscape1 {
+  0%,
+  16.667%,
+  to {
+    opacity: 1;
+  }
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}
+@keyframes animated-landscape2 {
+  0%,
+  to {
+    opacity: 0;
+  }
+  33.333%,
+  50% {
+    opacity: 1;
+  }
+  16.667%,
+  66.667% {
+    opacity: 0;
+  }
+}
+@keyframes animated-landscape3 {
+  0%,
+  50%,
+  to {
+    opacity: 0;
+  }
+  66.667%,
+  83.333% {
+    opacity: 1;
+  }
+}
+@keyframes animated-landscape-before1 {
+  0%,
+  16.667%,
+  to {
+    opacity: 0;
+  }
+  25%,
+  91.667% {
+    opacity: 1;
+  }
+}
+@keyframes animated-landscape-before2 {
+  0%,
+  to {
+    opacity: 1;
+  }
+  33.333%,
+  50% {
+    opacity: 0;
+  }
+  25%,
+  58.333% {
+    opacity: 1;
+  }
+}
+@keyframes animated-landscape-before3 {
+  0%,
+  58.333%,
+  91.667%,
+  to {
+    opacity: 1;
+  }
+  66.667%,
+  83.333% {
+    opacity: 0;
+  }
+}
 .hljs {
   display: block;
   overflow-x: auto;
@@ -991,29 +1135,3 @@ td {
 .hljs-strong {
   font-weight: bold;
 }
-
-      .post-container .post .post-title {
-        text-align: center;
-      }
-      .post-container .post .post-info {
-        text-align: center;
-      }
-      .post-detail .post .post-title {
-        text-align: center;
-      }
-      .post-detail .post .post-info {
-        text-align: center;
-      }
-    
-      body {
-        font-family: -apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif;
-      }
-    
-      a {
-        color: rgba(0, 0, 0, 0.86);
-      }
-    
-      a:hover {
-        color: #FFC300;
-      }
-    
